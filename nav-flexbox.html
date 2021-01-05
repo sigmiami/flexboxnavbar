@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="nav-flexbox.css">
+    <title>flexbox responsive nav bar</title>
+</head>
+<body>
+   
+        <nav class="navbar">
+           <h1 class="brandlogo">SiG</h1>
+            <ul class="navlinks" id="dropdownClick">
+                <li class="dropdownIcon"><a href="javascript:void(0)" onclick="dropDown()">&#9776;</a></li>
+                <li class="navitems"><a href="#">home</a></li>
+                <li class="navitems"><a href="#">about</a></li>
+                <li class="navitems"><a href="#">contact</a></li>
+                <li class="navitems"><a href="#">gallery</a></li>
+                
+            </ul>
+        </nav>
+
+    
+    <script>
+        function dropDown(){
+        var x=document.getElementById("dropdownClick");
+       
+        if (x.className==="navlinks"){
+        x.className+=" mobile";
+        
+        }else{x.className="navlinks"}
+        }
+        
+        </script>
+</body>
+</html>
