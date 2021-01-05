@@ -9,11 +9,11 @@
     <title>flexbox responsive nav bar</title>
 </head>
 <body>
-   
+      
         <nav class="navbar">
            <h1 class="brandlogo">SiG</h1>
             <ul class="navlinks" id="dropdownClick">
-                <li class="dropdownIcon"><a href="javascript:void(0)" onclick="dropDown()">&#9776;</a></li>
+                <li class="dropdownIcon"><a id="xicon" href="javascript:void(0)" onclick="dropDown()">&#9776;</a></li> <!--&#88;-->
                 <li class="navitems"><a href="#">home</a></li>
                 <li class="navitems"><a href="#">about</a></li>
                 <li class="navitems"><a href="#">contact</a></li>
@@ -26,11 +26,14 @@
     <script>
         function dropDown(){
         var x=document.getElementById("dropdownClick");
-       
+        let xicon=document.getElementById("xicon");
+
         if (x.className==="navlinks"){
         x.className+=" mobile";
-        
-        }else{x.className="navlinks"}
+        xicon.innerHTML="&#88;";
+        }else{x.className="navlinks";
+        xicon.innerHTML="&#9776;";
+        }
         }
         
         </script>
